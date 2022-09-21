@@ -1,0 +1,20 @@
+{
+  "name": "vite-static-site",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.18",
+    "@types/pug": "^2.0.6",
+    "pug": "^3.0.2",
+    "typescript": "^4.6.4",
+    "vite": "^3.1.0",
+    "vite-plugin-inspect": "^0.7.2",
+    "vite-plugin-restart": "^0.2.0"
+  }
+}
