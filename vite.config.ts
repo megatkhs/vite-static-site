@@ -1,11 +1,9 @@
 import { resolve } from 'node:path'
 import { defineConfig } from 'vite'
 import Inspect from 'vite-plugin-inspect'
-import ViteRestart from 'vite-plugin-restart'
-import { staticSitePlugin, vitePluginStaticSiteFramework } from './plugins'
+import { staticSitePlugin } from './plugins'
 
 export default defineConfig({
-  // ...
   root: 'src',
   build: {
     outDir: resolve(__dirname, 'dist'),
@@ -15,14 +13,5 @@ export default defineConfig({
       },
     },
   },
-  plugins: [
-    Inspect(),
-    staticSitePlugin(),
-    vitePluginStaticSiteFramework({
-      buildOptions: {
-        pretty: true,
-      },
-    }),
-  ],
-  // ...
+  plugins: [Inspect(), staticSitePlugin()],
 })
